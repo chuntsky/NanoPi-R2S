@@ -71,28 +71,29 @@ jobs:
           rm -rf lean/luci-theme-argon
           git clone https://github.com/jerrykuku/luci-theme-argon.git
 
-          svn co https://github.com/vernesong/OpenClash/tree/master/luci-app-openclash
+          svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
           
-          svn co https://github.com/xiaorouji/openwrt-passwall/tree/main/luci-app-passwall
-          svn co https://github.com/xiaorouji/openwrt-passwall/tree/main/tcping
-          svn co https://github.com/xiaorouji/openwrt-passwall/tree/main/ssocks
-          svn co https://github.com/xiaorouji/openwrt-passwall/tree/main/trojan-plus
-          svn co https://github.com/xiaorouji/openwrt-passwall/tree/main/trojan-go
-          svn co https://github.com/xiaorouji/openwrt-passwall/tree/main/naiveproxy
-          svn co https://github.com/xiaorouji/openwrt-passwall/tree/main/brook
-          svn co https://github.com/xiaorouji/openwrt-passwall/tree/main/chinadns-ng
-          svn co https://github.com/xiaorouji/openwrt-passwall/tree/main/xray-core
-          svn co https://github.com/xiaorouji/openwrt-passwall/tree/main/xray-plugin
+          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall
+          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/tcping
+          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/ssocks
+          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/trojan-plus
+          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/trojan-go
+          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/naiveproxy
+          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/brook
+          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/chinadns-ng
+          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/xray-core
+          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/xray-plugin
           
-          svn co https://github.com/songchenwen/nanopi-r2s/tree/master/luci-app-r2sflasher
+          svn co https://github.com/songchenwen/nanopi-r2s/trunk/luci-app-r2sflasher
           
-          svn co https://github.com/pymumu/smartdns/tree/master/package/openwrt smartdns
-          svn co https://github.com/pymumu/luci-app-smartdns luci-app-smartdns
+          svn co https://github.com/pymumu/smartdns/trunk/package/openwrt smartdns
+          # svn co https://github.com/pymumu/luci-app-smartdns luci-app-smartdns
+          git clone https://github.com/pymumu/luci-app-smartdns.git
           
-          svn co https://github.com/lisaac/luci-app-dockerman/tree/master/applications/luci-app-dockerman
+          svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman
           
           git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git
-          git clone https://github.com/NateLol/luci-app-oled
+          git clone https://github.com/NateLol/luci-app-oled.git
         
       - name: Install Clash Binaries
         run: |
@@ -122,16 +123,16 @@ jobs:
           cd code/friendlywrt
 
           rm -rf feeds/packages/libs/libcap
-          svn co https://github.com/openwrt/openwrt/tree/master/package/libs/libcap feeds/packages/libs/libcap
+          svn co https://github.com/openwrt/openwrt/trunk/package/libs/libcap feeds/packages/libs/libcap
           
           rm -rf package/feeds/packages/netdata
-          svn co https://github.com/coolsnowwolf/packages/tree/openwrt-19.07/admin/netdata package/feeds/packages/netdata
+          svn co https://github.com/coolsnowwolf/packages/branches/openwrt-19.07/admin/netdata package/feeds/packages/netdata
 
           rm -rf feeds/packages/libs/libnatpmp
-          svn co https://github.com/coolsnowwolf/packages/tree/openwrt-19.07/libs/libnatpmp feeds/packages/libs/libnatpmp
+          svn co https://github.com/coolsnowwolf/packages/branches/openwrt-19.07/libs/libnatpmp feeds/packages/libs/libnatpmp
           
           rm -rf feeds/packages/lang/luasec
-          svn co https://github.com/coolsnowwolf/packages/tree/openwrt-19.07/lang/luasec feeds/packages/lang/luasec
+          svn co https://github.com/coolsnowwolf/packages/branches/openwrt-19.07/lang/luasec feeds/packages/lang/luasec
 
           sed -i '/STAMP_BUILT/d' feeds/packages/utils/runc/Makefile
           sed -i '/STAMP_BUILT/d' feeds/packages/utils/containerd/Makefile
