@@ -111,7 +111,7 @@ jobs:
           cd code/friendlywrt/include
           sed -i 's/dnsmasq /dnsmasq-full default-settings luci /' target.mk
 
-      - name: Update Feeds		
+      - name: Update Feeds 
         run: |		
           cd code/friendlywrt		
           ./scripts/feeds update -a		
