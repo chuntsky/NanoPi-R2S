@@ -69,27 +69,27 @@ jobs:
           git clone https://github.com/jerrykuku/luci-app-vssr.git
 
           rm -rf lean/luci-theme-argon
-          git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
+          git clone https://github.com/jerrykuku/luci-theme-argon.git
 
-          svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
+          svn co https://github.com/vernesong/OpenClash/tree/master/luci-app-openclash
           
-          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall
-          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/tcping
-          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/ssocks
-          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/trojan-plus
-          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/trojan-go
-          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/naiveproxy
-          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/brook
-          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/chinadns-ng
-          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/xray-core
-          svn co https://github.com/xiaorouji/openwrt-passwall/trunk/xray-plugin
+          svn co https://github.com/xiaorouji/openwrt-passwall/tree/main/luci-app-passwall
+          svn co https://github.com/xiaorouji/openwrt-passwall/tree/main/tcping
+          svn co https://github.com/xiaorouji/openwrt-passwall/tree/main/ssocks
+          svn co https://github.com/xiaorouji/openwrt-passwall/tree/main/trojan-plus
+          svn co https://github.com/xiaorouji/openwrt-passwall/tree/main/trojan-go
+          svn co https://github.com/xiaorouji/openwrt-passwall/tree/main/naiveproxy
+          svn co https://github.com/xiaorouji/openwrt-passwall/tree/main/brook
+          svn co https://github.com/xiaorouji/openwrt-passwall/tree/main/chinadns-ng
+          svn co https://github.com/xiaorouji/openwrt-passwall/tree/main/xray-core
+          svn co https://github.com/xiaorouji/openwrt-passwall/tree/main/xray-plugin
           
-          svn co https://github.com/songchenwen/nanopi-r2s/trunk/luci-app-r2sflasher
+          svn co https://github.com/songchenwen/nanopi-r2s/tree/master/luci-app-r2sflasher
           
-          svn co https://github.com/pymumu/smartdns/trunk/package/openwrt smartdns
-          svn co https://github.com/pymumu/luci-app-smartdns/branches/lede luci-app-smartdns
+          svn co https://github.com/pymumu/smartdns/tree/master/package/openwrt smartdns
+          svn co https://github.com/pymumu/luci-app-smartdns luci-app-smartdns
           
-          svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman
+          svn co https://github.com/lisaac/luci-app-dockerman/tree/master/applications/luci-app-dockerman
           
           git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git
           git clone https://github.com/NateLol/luci-app-oled
