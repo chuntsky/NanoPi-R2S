@@ -122,16 +122,16 @@ jobs:
           cd code/friendlywrt
 
           rm -rf feeds/packages/libs/libcap
-          svn co https://github.com/openwrt/packages/trunk/libs/libcap feeds/packages/libs/libcap
+          svn co https://github.com/openwrt/openwrt/tree/master/package/libs/libcap feeds/packages/libs/libcap
           
           rm -rf package/feeds/packages/netdata
-          svn co https://github.com/openwrt/packages/trunk/admin/netdata package/feeds/packages/netdata
+          svn co https://github.com/coolsnowwolf/packages/tree/openwrt-19.07/admin/netdata package/feeds/packages/netdata
 
           rm -rf feeds/packages/libs/libnatpmp
-          svn co https://github.com/coolsnowwolf/packages/trunk/libs/libnatpmp feeds/packages/libs/libnatpmp
+          svn co https://github.com/coolsnowwolf/packages/tree/openwrt-19.07/libs/libnatpmp feeds/packages/libs/libnatpmp
           
           rm -rf feeds/packages/lang/luasec
-          svn co https://github.com/coolsnowwolf/packages/trunk/lang/luasec feeds/packages/lang/luasec
+          svn co https://github.com/coolsnowwolf/packages/tree/openwrt-19.07/lang/luasec feeds/packages/lang/luasec
 
           sed -i '/STAMP_BUILT/d' feeds/packages/utils/runc/Makefile
           sed -i '/STAMP_BUILT/d' feeds/packages/utils/containerd/Makefile
@@ -140,7 +140,7 @@ jobs:
           sed -i '/upx/d' package/lean/UnblockNeteaseMusicGo/Makefile
           sed -i '/upx/d' package/trojan-go/Makefile
           
-          wget -O package/kernel/kmod-sched-cake/Makefile https://raw.githubusercontent.com/coolsnowwolf/lede/master/package/kernel/kmod-sched-cake-oot/Makefile
+          wget -O package/kernel/kmod-sched-cake/Makefile https://raw.githubusercontent.com/dzheng533/lede_openwrt/master/package/kernel/kmod-sched-cake-oot/Makefile
           wget -O feeds/packages/libs/libxml2/Makefile https://raw.githubusercontent.com/coolsnowwolf/packages/master/libs/libxml2/Makefile
 
           sed -i "/redirect_https/d" package/network/services/uhttpd/files/uhttpd.config
@@ -159,7 +159,7 @@ jobs:
       - name: Patch Kernel
         run: |
           cd code/kernel/
-          #git apply ../../patches/001-add-full_cone_nat.patch
+          git apply ../../patches/001-add-full_cone_nat.patch
 
       - name: Custom Configure Files
         run: |
