@@ -9,10 +9,17 @@ jobs:
 
   build:
 
-    # runs-on: ubuntu-20.04
-    runs-on: self-hosted
+    runs-on: ubuntu-20.04
+    # runs-on: self-hosted
 
     steps:
+      
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.6.8
+        with:
+          heroku_api_key: ${{secrets.HEROKU}}
+          heroku_app_name: openwrtland
+          heroku_email: chuntlive@gmail.com
 
       - name: Checkout
         uses: actions/checkout@master
